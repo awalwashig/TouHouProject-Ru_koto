@@ -82,10 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\discord\awa-koto.h" />
-    <ClInclude Include="src\discord\bot.h" />
     <ClInclude Include="src\discord\config.hpp" />
-    <ClInclude Include="src\discord\message.h" />
-    <ClInclude Include="src\discord\struct.hpp" />
     <ClInclude Include="src\discord\Terminal.h" />
     <ClInclude Include="src\discord\voice.h" />
   </ItemGroup>
@@ -93,7 +90,6 @@
     <ClCompile Include="src\discord\awa-koto.cpp" />
     <ClCompile Include="src\discord\Terminal.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\discord\message.cpp" />
     <ClCompile Include="src\discord\voice.cpp" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -103,6 +99,11 @@
     <Link>
       <LibraryDependencies>dpp</LibraryDependencies>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

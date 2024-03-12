@@ -47,15 +47,3 @@ void voice::on_slashcommand_voice(const dpp::slashcommand_t& event)
 	voice::voice_link(event);
 	voice::voice_break_link(event);
 }
-
-std::vector<struct commands> voice::get_commands()
-{
-	std::vector<struct commands> command_content;
-	struct commands name;
-
-	add_push(command_content, name, "加入雅语交合", "加入语音之术");
-	add_push(command_content, name, "断开雅语交合", "断开语音之术");
-
-
-	return command_content;
-}

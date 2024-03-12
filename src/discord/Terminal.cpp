@@ -23,7 +23,6 @@ void Terminal_linux::Terminal(const char* cmd, char* result)
 	}
 }
 
-void Terminal_linux::Start_Thread_Terminal(const char* cmd, char* result)
-{
+void Terminal_linux::Start_Thread_Terminal(const char* cmd, char* result){
 	std::thread Terminal(Terminal_linux::Terminal, cmd, result);
 }
