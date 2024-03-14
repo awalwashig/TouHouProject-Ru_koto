@@ -102,8 +102,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
-      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <CppLanguageStandard>c++20</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <LibraryDependencies>dpp</LibraryDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
