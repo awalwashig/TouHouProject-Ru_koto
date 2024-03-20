@@ -15,7 +15,6 @@ private:
 	dpp::cluster Ru_koto;
 	std::vector<std::pair<std::string, std::string>> slashcommand;
 
-
 	bool Terminal_ready = 0;
 	dpp::message_create_t Terminal_event;
 	std::string Terminal_content;

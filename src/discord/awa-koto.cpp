@@ -28,8 +28,6 @@ void awa_koto::load_slashcommand_read() {
 		});
 }
 
-
-
 void awa_koto::run_Terminal()
 {
 	Ru_koto.on_message_create([this](const dpp::message_create_t event) {
