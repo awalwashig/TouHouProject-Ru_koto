@@ -80,18 +80,6 @@
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\discord\awa-koto.h" />
-    <ClInclude Include="src\discord\config.hpp" />
-    <ClInclude Include="src\discord\Terminal.h" />
-    <ClInclude Include="src\discord\voice.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\discord\awa-koto.cpp" />
-    <ClCompile Include="src\discord\Terminal.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\discord\voice.cpp" />
-  </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <CppLanguageStandard>c++20</CppLanguageStandard>
