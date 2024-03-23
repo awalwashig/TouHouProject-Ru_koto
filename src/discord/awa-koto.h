@@ -23,6 +23,26 @@ public:
 	void add_slashcommand(std::string cmd, std::string content);
 private:
 	void load_slashcommand_read();
+		//Terminal_
+		bool Terminal_ready = 0;
+		dpp::message_create_t Terminal_event;
+		std::string Terminal_content;
+	public:
+		//Init
+		static void Init(const std::string token, bool st_);
+		static void Quit();
+		static awa_koto& GetInstance();
+		~awa_koto();
+
+
+		awa_koto(std::string token, bool st_);
+		void add_slashcommand(std::string cmd, std::string content);
+	private:
+		static std::unique_ptr<awa_koto>instance_;
+
+		awa_koto(const std::string token,const bool st_);
+
+		void load_slashcommand_read();
 
 	void run_Terminal();
 	static void Terminal(std::string Terminal_content, dpp::message_create_t Terminal_event, bool Terminal_ready);

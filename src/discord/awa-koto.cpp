@@ -1,7 +1,13 @@
 #include "awa-koto.h"
 
-awa_koto::awa_koto(std::string token, bool st_)
-	:Ru_koto(token, dpp::i_default_intents | dpp::i_message_content) {
+namespace Awa {
+	void awa_koto::Init(const std::string token, bool st_)
+	{
+		instance_.reset(new awa_koto(token, st_));
+	}
+
+	Awa::awa_koto::awa_koto(std::string token, bool st_)
+		:Ru_koto(token, dpp::i_default_intents | dpp::i_message_content) {
 
 	Ru_koto.on_log(dpp::utility::cout_logger());
 
