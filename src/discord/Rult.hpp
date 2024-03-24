@@ -1,4 +1,3 @@
-
 #include "Ru_koto.h"
 
 namespace Rult {

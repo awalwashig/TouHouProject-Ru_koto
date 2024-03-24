@@ -1,3 +1,5 @@
+#ifndef _RU_KOTO_H_
+#define _RU_KOTO_H_
 
 #include <dpp/dpp.h>
 
@@ -17,3 +19,4 @@ namespace Rult {
 		void test();
 	};
 }
+#endif
