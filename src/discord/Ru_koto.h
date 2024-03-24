@@ -1,7 +1,8 @@
 #ifndef _RU_KOTO_H_
 #define _RU_KOTO_H_
 
-#include <dpp/dpp.h>
+#include <iostream>
+#include <memory>
 
 namespace Rult {
 	class Ru_koto {
