@@ -83,9 +83,11 @@
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\discord\Fn\test.cpp" />
-    <ClCompile Include="src\discord\Rult.hpp" />
     <ClCompile Include="src\discord\Ru_koto.cpp" />
-    <ClCompile Include="src\discord\Ru_koto.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\discord\Rult.hpp" />
+    <ClInclude Include="src\discord\Ru_koto.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
