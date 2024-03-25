@@ -7,7 +7,7 @@
 namespace Rult {
 	class Ru_koto {
 	public:
-		static void Init();
+		static void Init(const std::string config);
 		static void Quit();
 		static Ru_koto& GetInstance();
 
@@ -15,9 +15,9 @@ namespace Rult {
 
 	private:
 		static std::unique_ptr<Ru_koto>instance_;
-		Ru_koto();
+		Ru_koto(const std::string config);
 		//QwQ
-		void test();
+		void test(const std::string config);
 	};
 }
 #endif
