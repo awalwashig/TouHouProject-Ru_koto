@@ -7,5 +7,6 @@ set your config
 
 int main() {
 	Rult::Init("/home/awalwa/projects/bot/config.txt");
+
 	return 9;
 }

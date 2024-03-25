@@ -15,7 +15,10 @@ namespace Rult {
 
 	Ru_koto::Ru_koto(const std::string config)
 	:ru_koto(Config(config,"token"), dpp::i_default_intents | dpp::i_message_content) {
+		ru_koto.on_log(dpp::utility::cout_logger());
 		//Fn Init is here
+		
+		voice();
 
 		ru_koto.start(dpp::st_wait);
 	}

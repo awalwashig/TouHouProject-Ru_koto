@@ -19,10 +19,13 @@ namespace Rult {
 		dpp::cluster ru_koto;
 		//Class Init
 		Ru_koto(const std::string config);
-		//QwQ
 
+		//Fn
 
 		std::string Config(const std::string config, const std::string type);
+		
+		void voice();
+		void monitor_message();
 	};
 }
 #endif
