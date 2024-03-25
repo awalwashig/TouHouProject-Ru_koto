@@ -13,8 +13,11 @@ namespace Rult {
 		return *instance_;
 	}
 
-	Ru_koto::Ru_koto(const std::string config){
-		test(config);
+	Ru_koto::Ru_koto(const std::string config)
+	:ru_koto(Config(config,"token"), dpp::i_default_intents | dpp::i_message_content) {
+		//Fn Init is here
+
+		ru_koto.start(dpp::st_wait);
 	}
 
 	Ru_koto::~Ru_koto() {
