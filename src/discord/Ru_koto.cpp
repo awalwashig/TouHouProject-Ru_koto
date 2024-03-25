@@ -19,6 +19,7 @@ namespace Rult {
 		//Fn Init is here
 		
 		voice();
+		monitor_message();
 
 		ru_koto.start(dpp::st_wait);
 	}
