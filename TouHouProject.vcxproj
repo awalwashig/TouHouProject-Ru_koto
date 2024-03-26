@@ -84,6 +84,7 @@
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\discord\Fn\config.cpp" />
     <ClCompile Include="src\discord\Fn\monitor_message.cpp" />
+    <ClCompile Include="src\discord\Fn\terminal.cpp" />
     <ClCompile Include="src\discord\Fn\voice.cpp" />
     <ClCompile Include="src\discord\Ru_koto.cpp" />
   </ItemGroup>

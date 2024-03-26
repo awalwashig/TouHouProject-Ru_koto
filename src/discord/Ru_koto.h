@@ -1,8 +1,6 @@
 #ifndef _RU_KOTO_H_
 #define _RU_KOTO_H_
 #pragma once
-#include <iostream>
-#include <memory>
 #include <dpp/dpp.h>
 
 namespace Rult {
@@ -24,8 +22,12 @@ namespace Rult {
 
 		std::string Config(const std::string config, const std::string type);
 		
+
+		
 		void voice();
 		void monitor_message();
+		void terminal();
+
 	};
 }
 #endif
