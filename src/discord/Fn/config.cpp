@@ -2,18 +2,29 @@
 #include <fstream>
 
 namespace Rult {
-	std::string Ru_koto::Config(const std::string config, const std::string type) {
+
+
+
+	std::vector<std::string> Ru_koto::Config(const std::string config, const std::string type) {
 		std::ifstream stream(config);
 		std::string line;
+		bool flag = 0;
 
-		if (type == "token")
-			while (getline(stream, line)) {
-				if (line.find("#token") != std::string::npos) {
-					getline(stream, line);
-					return line;
+		std::vector<std::string> content;
+
+		while (getline(stream, line)) {
+			if (line.find("#" + type) != std::string::npos) {
+				while (getline(stream, line)) {
+					if (!line.find("#end")) {
+						flag = 1;
+						break;
+					}
+					content.push_back(line);
 				}
+				if (flag)
+					break;
 			}
-
-
+		}
+		return content;
 	}
 }

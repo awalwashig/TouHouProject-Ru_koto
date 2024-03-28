@@ -4,6 +4,7 @@
 #include <dpp/dpp.h>
 
 namespace Rult {
+	//使用3D
 	class Ru_koto {
 	public:
 		static void Init(const std::string config);
@@ -12,6 +13,7 @@ namespace Rult {
 
 		~Ru_koto();
 
+		std::string config_;
 	private:
 		static std::unique_ptr<Ru_koto>instance_;
 		dpp::cluster ru_koto;
@@ -20,10 +22,10 @@ namespace Rult {
 
 		//Fn
 
-		std::string Config(const std::string config, const std::string type);
+		std::vector<std::string> Config(const std::string config, const std::string type);
 		
 
-		
+		void slashcommand();
 		void voice();
 		void monitor_message();
 		void terminal();
