@@ -16,15 +16,13 @@ namespace Rult {
 			if (line.find("#" + type) != std::string::npos) {
 				while (getline(stream, line)) {
 					if (!line.find("#end")) {
-						flag = 1;
-						break;
+						return content;
 					}
 					content.push_back(line);
 				}
-				if (flag)
-					break;
+
 			}
 		}
-		return content;
+
 	}
 }
