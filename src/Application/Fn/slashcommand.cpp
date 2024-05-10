@@ -1,9 +1,6 @@
 #include "../Ru_koto.h"
 
 namespace Rult {
-
-
-
 	void Ru_koto::slashcommand() {
 		ru_koto.on_slashcommand([this](const dpp::slashcommand_t& event) {
 			if (event.command.get_command_name() == "刷新命令") {
@@ -15,7 +12,7 @@ namespace Rult {
 				}
 			}
 			});
-
+		
 		ru_koto.on_ready([this](const dpp::ready_t& event) {
 			ru_koto.global_command_create(dpp::slashcommand("刷新命令", "Refresh command", ru_koto.me.id));
 			});

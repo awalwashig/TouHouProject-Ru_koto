@@ -14,16 +14,18 @@ namespace Rult {
 	}
 
 	Ru_koto::Ru_koto(const std::string config)
-		:ru_koto(Config(config, "token")[0], dpp::i_default_intents | dpp::i_message_content), config_(config) {
+		:ru_koto(/*Config(config, "token")[0].c_str()*/"MTE0MDE2NjU3ODE3NzA2OTA3Nw.GxR9c_.9w1sn2YihWMh_T7Z5fVCgLiNLH3Dl61TaqSp64", dpp::i_default_intents | dpp::i_message_content), config_(config) {
 		//logh
-		ru_koto.on_log(dpp::utility::cout_logger());
-		//Fn Init is here
 
+		ru_koto.on_log(dpp::utility::cout_logger());
+
+		//Fn Init is here 
 		slashcommand();
 		voice();
 		monitor_message();
 		terminal();
-
+		interpreter();
+		QQandDiscord();
 		ru_koto.start(dpp::st_wait);
 	}
 

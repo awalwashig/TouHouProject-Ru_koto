@@ -20,19 +20,18 @@ namespace Rult {
 						join_vc = true;
 					}
 				}
+
 				if (join_vc) {
 					if (!g->connect_member_voice(event.command.get_issuing_user().id)) {
 						event.reply(dpp::message("你似乎不在语音频道").set_flags(dpp::m_ephemeral));
 						return;
 					}
-
 					event.reply(dpp::message("加入语音频道ing").set_flags(dpp::m_ephemeral));
 				}
 				else {
 					event.reply(dpp::message("我已经和你在一个语音频道了").set_flags(dpp::m_ephemeral));
 				}
 			}
-
 			if (event.command.get_command_name() == "断开雅语交合") {
 
 			}

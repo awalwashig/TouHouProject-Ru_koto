@@ -3,9 +3,12 @@ This file manage apps
 set your config
 */
 
-#include "discord/Rult.hpp"
+#include "Application/Rult.hpp"
 
-int main() {
+
+
+
+int main(int argc, char* argv[]) {
 	Rult::Init("/home/awalwa/projects/bot/config.txt");
 
 	return 9;

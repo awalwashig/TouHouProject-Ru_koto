@@ -2,9 +2,8 @@
 #define _RU_KOTO_H_
 #pragma once
 #include <dpp/dpp.h>
-
+#include "default.h"
 namespace Rult {
-	//使用3D
 	class Ru_koto {
 	public:
 		static void Init(const std::string config);
@@ -14,22 +13,23 @@ namespace Rult {
 		~Ru_koto();
 
 		std::string config_;
+		std::vector<dpp::snowflake> objs[9];
 	private:
 		static std::unique_ptr<Ru_koto>instance_;
 		dpp::cluster ru_koto;
+		dpp::role tmp;
 		//Class Init
 		Ru_koto(const std::string config);
 
-		//Fn
-
 		std::vector<std::string> Config(const std::string config, const std::string type);
-		
+
 
 		void slashcommand();
 		void voice();
 		void monitor_message();
 		void terminal();
-
+		void interpreter();
+		void QQandDiscord();
 	};
 }
 #endif
