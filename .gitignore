@@ -1,4 +1,11 @@
-#vs file不能屏蔽
-#dir
-obj
-bin
+
+#文件
+*.obj
+*.bin
+
+.vcxproj
+.vcxproj.user
+
+#目录
+/bin
+/build
