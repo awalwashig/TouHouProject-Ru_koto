@@ -29,7 +29,7 @@ namespace Rult {
 		void monitor_message();
 		void terminal();
 		void interpreter();
-		void QQandDiscord();
+		void QDSand();
 	};
 }
 #endif
