@@ -6,16 +6,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (TouHouProject_Ru_koto 
-
+	src/Application.cpp
 )
 
 add_library(TwoBot STATIC
- #       src/server/twobot.hh
- #       src/server/twobot.cc
- #       src/server/apiset.cc
+ #       twobot.hh
+ #       twobot.cc
+ #       apiset.cc
  )
 
-target_include_directories(TwoBot PUBLIC src/server/)
+target_include_directories(TwoBot PUBLIC lib/TwoBot)
 
 add_subdirectory(lib)
 target_link_libraries(TwoBot PUBLIC nlohmann_json::nlohmann_json brynet httplib::httplib)
