@@ -6,25 +6,13 @@ set(CMAKE_CXX_STANDARD 17)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (TouHouProject_Ru_koto 
-	"src/Application.cpp" 
-	"src/Application/default.h"
-	"src/Application/Rult.hpp"
-	"src/Application/Ru_koto.cpp"
-	"src/Application/Ru_koto.h"
-	"src/Application/Fn/config.cpp"
-	"src/Application/Fn/interpreter.cpp"
-	"src/Application/Fn/monitor_message.cpp"
-	"src/Application/Fn/slashcommand.cpp"
-	"src/Application/Fn/terminal.cpp"
-	"src/Application/Fn/voice.cpp"
-	"src/server/twobot/link_QD.cpp"
-    "src/server/twobot/Two_link_QD.hpp"
+
 	  )
 
 add_library(TwoBot STATIC
-        src/server/twobot.hh
-        src/server/twobot.cc
-        src/server/apiset.cc
+ #       src/server/twobot.hh
+ #       src/server/twobot.cc
+ #       src/server/apiset.cc
  )
 
 target_include_directories(TwoBot PUBLIC src/server/)
