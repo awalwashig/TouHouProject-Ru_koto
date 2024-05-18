@@ -10,10 +10,10 @@ add_executable (TouHouProject_Ru_koto
 )
 
 add_library(TwoBot STATIC
-        src/TwoBot/twobot.hh
-        src/TwoBot/twobot.cc
-        src/TwoBot/apiset.cc
- )
+       src/TwoBot/twobot.hh
+       src/TwoBot/twobot.cc
+       src/TwoBot/apiset.cc
+)
 
 target_include_directories(TwoBot PUBLIC src/TwoBot)
 
