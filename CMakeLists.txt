@@ -4,28 +4,33 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 set(CMAKE_CXX_STANDARD 17)
 
+FILE(GLOB_RECURSE MAIN "src/Application.cpp")
+
+FILE(GLOB_RECURSE APP_HEADER "src/Application/*.h")
+FILE(GLOB_RECURSE APP_SOURCE "src/Application/*cpp")
+FILE(GLOB_RECURSE APP_HPP "src/Application/*.hpp")
+
+FILE(GLOB_RECURSE FN_HEADER "src/Application/FN/*.h")
+FILE(GLOB_RECURSE FN_SOURCE "src/Application/FN/*.cpp")
+FILE(GLOB_RECURSE FN_HPP "src/Application/FN/*.hpp")
+
+FILE(GLOB_RECURSE TWOBOT_HEADER "src/server/twobot/*.h")
+FILE(GLOB_RECURSE TWOBOT_SOURCE "src/server/twobot/*.cpp")
+FILE(GLOB_RECURSE TWOBOT_HPP "src/server/twobot/*.hpp")
+
 # 将源代码添加到此项目的可执行文件。
 add_executable (TouHouProject_Ru_koto 
-	"src/Application.cpp" 
-	"src/Application/default.h"
-	"src/Application/Rult.hpp"
-	"src/Application/Ru_koto.cpp"
-	"src/Application/Ru_koto.h"
-	"src/Application/Fn/config.cpp"
-	"src/Application/Fn/interpreter.cpp"
-	"src/Application/Fn/monitor_message.cpp"
-	"src/Application/Fn/slashcommand.cpp"
-	"src/Application/Fn/terminal.cpp"
-	"src/Application/Fn/voice.cpp"
-	"src/server/twobot/link_QD.cpp"
-    "src/server/twobot/Two_link_QD.hpp"
-	  )
+	${MAIN}
+	${APP_HEADER} ${APP_SOURCE} ${APP_HPP}
+	${FN_HEADER} ${FN_SOURCE} ${FN_HPP}
+	${TWOBOT_HEADER} ${TWOBOT_SOURCE} ${TWOBOT_HPP}
+	)
 
 add_library(TwoBot STATIC
         src/server/twobot.hh
         src/server/twobot.cc
         src/server/apiset.cc
- )
+	)
 
 target_include_directories(TwoBot PUBLIC src/server/)
 
