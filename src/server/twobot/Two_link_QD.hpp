@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Application/Ru_koto.h"
 #include "../twobot.hh"
-#include "../../../dependencies/include/dpp-10.0/dpp/dpp.h"
+//#include "../../../dependencies/include/dpp-10.0/dpp/dpp.h"
 
 #include<regex>
 #include <stdlib.h>

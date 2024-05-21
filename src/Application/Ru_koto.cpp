@@ -14,7 +14,7 @@ namespace Rult {
 	}
 
 	Ru_koto::Ru_koto(const std::string config)
-		:ru_koto(/*Config(config, "token")[0].c_str()*/"MTE0MDE2NjU3ODE3NzA2OTA3Nw.G9Bt6_.nOzaFOoxhyPFQgRM5hrhu5cfPPJqoi4yMQGj2o", dpp::i_default_intents | dpp::i_message_content), config_(config) {
+		:ru_koto(/*Config(config, "token")[0].c_str()*/, dpp::i_default_intents | dpp::i_message_content), config_(config) {
 		//logh
 
 		ru_koto.on_log(dpp::utility::cout_logger());
