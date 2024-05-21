@@ -49,11 +49,13 @@ namespace TwoSend {
 	using namespace TwoUtilAttribute;
 
 	void botSend(const GroupMsg&& msg) {
-		if (msg.raw_message.find("/") == 0)
+		if (msg.raw_message.find("/") == 0){
 			instance->getApiSet().sendGroupMsg(638380392, TwoMessageUtil::Processing(msg));
-		else
+		}
+		else{
 			Rult::Ru_koto(this).message_create(dpp::message(TwoMessageUtil::Choice_name(msg) + ":" + TwoMessageUtil::Processing(msg)).set_channel_id(950402907575054336));
-	});
+		}
+	};
 	
 	void botSend(const dpp::message_create_t& event) {
 		if (event.msg.channel_id == 950402907575054336 && event.msg.author.id != this.me.id) {
