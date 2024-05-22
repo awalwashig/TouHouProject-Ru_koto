@@ -1,7 +1,6 @@
 #pragma once
 #include "../../Application/Ru_koto.h"
 #include "../twobot.hh"
-//#include "../../../dependencies/include/dpp-10.0/dpp/dpp.h"
 
 #include<regex>
 #include <stdlib.h>
@@ -40,19 +39,3 @@ namespace TwoMessageUtil {
 		return msg.raw_message;
 	}
 }
-
-//namespace TwoSend {
-//	using twobot::Config;
-//	using twobot::BotInstance;
-//	using twobot::ApiSet;
-//	using namespace twobot::Event;
-//	using namespace TwoUtilAttribute;
-//
-//	void botSend(const GroupMsg&& msg) {
-//
-//	};
-//	
-//	void botSend(const dpp::message_create_t& event) {
-//
-//	}
-//}
