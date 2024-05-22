@@ -41,25 +41,18 @@ namespace TwoMessageUtil {
 	}
 }
 
-namespace TwoSend {
-	using twobot::Config;
-	using twobot::BotInstance;
-	using twobot::ApiSet;
-	using namespace twobot::Event;
-	using namespace TwoUtilAttribute;
-
-	void botSend(const GroupMsg&& msg) {
-		if (msg.raw_message.find("/") == 0){
-			instance->getApiSet().sendGroupMsg(638380392, TwoMessageUtil::Processing(msg));
-		}
-		else{
-			Rult::Ru_koto(this).message_create(dpp::message(TwoMessageUtil::Choice_name(msg) + ":" + TwoMessageUtil::Processing(msg)).set_channel_id(950402907575054336));
-		}
-	};
-	
-	void botSend(const dpp::message_create_t& event) {
-		if (event.msg.channel_id == 950402907575054336 && event.msg.author.id != this.me.id) {
-			instance->getApiSet().sendGroupMsg(638380392, event.msg.author.global_name + ":" + TwoMessageUtil::Processing(event));
-		}
-	}
-}
+//namespace TwoSend {
+//	using twobot::Config;
+//	using twobot::BotInstance;
+//	using twobot::ApiSet;
+//	using namespace twobot::Event;
+//	using namespace TwoUtilAttribute;
+//
+//	void botSend(const GroupMsg&& msg) {
+//
+//	};
+//	
+//	void botSend(const dpp::message_create_t& event) {
+//
+//	}
+//}
