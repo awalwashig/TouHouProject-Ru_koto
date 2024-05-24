@@ -1,5 +1,5 @@
-#ifndef RU_KOTO_H
-#define RU_KOTO_H
+#ifndef _RU_KOTO_H_
+#define _RU_KOTO_H_
 #pragma once
 
 
