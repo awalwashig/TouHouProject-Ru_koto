@@ -7,13 +7,15 @@ set(CMAKE_CXX_STANDARD 17)
 # 将源代码添加到此项目的可执行文件。
 add_executable (TouHouProject_Ru_koto 
 	"src/Application.cpp"
-)
+    "src/Ru_koto.cpp" 
+    "src/Ru_koto.h")
 
 add_library(TwoBot STATIC
        TwoBot/twobot.hh
        TwoBot/twobot.cc
        TwoBot/apiset.cc
-)
+        src/Ru_koto.cpp
+        src/Ru_koto.h)
 
 target_include_directories(TwoBot PUBLIC src/TwoBot)
 
