@@ -6,7 +6,7 @@ namespace TwoUtilAttribute {
 	using twobot::BotInstance;
 	using twobot::ApiSet;
 	using namespace twobot::Event;
-
+	
 	auto instance = BotInstance::createInstance(Config{
 		"192.168.31.167",
 		5751,

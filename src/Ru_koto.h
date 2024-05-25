@@ -10,12 +10,14 @@
 目前来说是这样的
 */
 namespace RuKoto {
+	class CoutContent;
 	class UniversalContent;
 	class Config;
 	class Message;
 	class Command;
 	class JSregex;
 }
+
 
 class RuKoto::UniversalContent {
 public:
