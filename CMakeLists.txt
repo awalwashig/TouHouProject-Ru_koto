@@ -5,17 +5,19 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(CMAKE_CXX_STANDARD 17)
 
 # 将源代码添加到此项目的可执行文件。
+FILE(GLOB_RECURSE SRC_HEADER "src/*.h")
+FILE(GLOB_RECURSE SRC_SOURCE "src/*cpp")
+FILE(GLOB_RECURSE SRC_HPP "src/*.hpp")
+
 add_executable (TouHouProject_Ru_koto 
-	"src/Application.cpp"
-    "src/Ru_koto.cpp" 
-    "src/Ru_koto.h")
+	${SRC_HEADER} ${SRC_SOURCE} ${SRC_HPP}
+	)
 
 add_library(TwoBot STATIC
-       TwoBot/twobot.hh
-       TwoBot/twobot.cc
-       TwoBot/apiset.cc
-        src/Ru_koto.cpp
-        src/Ru_koto.h)
+       src/TwoBot/twobot.hh
+       src/TwoBot/twobot.cc
+       src/TwoBot/apiset.cc
+)
 
 target_include_directories(TwoBot PUBLIC src/TwoBot)
 

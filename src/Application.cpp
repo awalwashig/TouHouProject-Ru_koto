@@ -2,6 +2,6 @@
 #include "Qpp.hpp"
 #include "dpp.hpp"
 
-int main() {
-	return 0;
+int main(char* argc,char** arge[]) {
+
 } 

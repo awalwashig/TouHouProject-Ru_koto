@@ -1,26 +1,27 @@
-#ifndef _RU_KOTO_H_
-#define _RU_KOTO_H_
 #pragma once
 
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <regex>
+
 /*
 该类主要设计成为多个框架提供传递的方法
 目前来说是这样的
 */
 namespace RuKoto {
-	//
 	class UniversalContent;
 	class Config;
 	class Message;
 	class Command;
+	class JSregex;
 }
 
 class RuKoto::UniversalContent {
-
+public:
+	UniversalContent* get_m_UniversalContent();
 private:
-
+	RuKoto::UniversalContent* m_UniversalContent;
 };
 
 class RuKoto::Config {
@@ -29,4 +30,3 @@ public:
 private:
 	RuKoto::UniversalContent* m_UniversalContent;
 };
-#endif // !RU_KOTO_H
