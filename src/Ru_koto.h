@@ -14,7 +14,7 @@ namespace RuKoto {
 	class UniversalContent;
 	class Config;
 	class Message;
-	class Slashcommand;
+	class Command;
 }
 
 class RuKoto::UniversalContent {
